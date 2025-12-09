@@ -1,4 +1,5 @@
-data = input().strip().splitlines()
+import sys
+data = sys.stdin.read().splitlines()
 def simulate(target):
     p1, p2 = 0, 0
     score = []
@@ -16,7 +17,7 @@ def simulate(target):
                 p1, p2 = 0, 0
                 
 def print_score(score, p1, p2):
-    for _, player1, player2 in enumerate(score):
+    for _, (player1, player2) in enumerate(score):
         print(f"{player1}:{player2}")
     print(f"{p1}:{p2}")
 
